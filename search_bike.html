@@ -1,0 +1,49 @@
+{% include "uheader.html" %}
+
+  <section class="inner-page-banner bg_img overlay-3" data-background="assets/images/inner-page-bg.jpg">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+
+          <ol class="page-list">
+            <li><a href="#"><i class="fa fa-home"></i>Search Bikes</a></li>
+            <li>Search Bikes Details</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br><br><br><br><br><br><br><br><br>
+
+ <section class="search-section pt-120 pb-120">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="car-search-area">
+            <h3 class="title">Search</h3>
+            <form class="car-search-form" action="search_bikelist" method="post">
+
+              <div class="row">
+                <div class="col-lg-12 form-group">
+                  <select name="budget" required >
+                    <option value="">Select Bike Budget</option>
+					<option value="100000-200000">1-2 Lakh</option>
+					<option value="200000-300000">2-3 Lakh</option>
+                    <option value="300000-400000">3-4 Lakh</option>
+					<option value="400000-500000">4-5 Lakh</option>
+					<option value="500000-1000000">5-10 Lakh</option>
+
+							</select>
+
+                </div>
+              </div>
+
+              <button type="submit" class="cmn-btn btn-radius">Search</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% include "footer.html" %}
