@@ -1,0 +1,85 @@
+{% include "aheader.html" %}
+
+
+ <section class="inner-page-banner bg_img overlay-3" data-background="{{ url_for('static',filename='assets/images/inner-page-bg.jpg')}}">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="page-title">Update</h2>
+          <ol class="page-list">
+            <li><a href="{{url_for('adminhome')}}"><i class="fa fa-home"></i> Home</a></li>
+            <li>Bike Details Update</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+ <section class="login-section pt-120 pb-120">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="login-block text-center">
+            <div class="login-block-inner">
+              <h3 class="title">Update Bike Details</h3>
+              <form class="login-form" action="/update_bike2" method="post" type="POST">
+
+
+                <div class="frm-group">
+                  <input type="hidden" name="id" id="f-name" value="{{sno}}">
+                </div>
+                <div class="frm-group">
+
+                  <input type="text" name="bike_comp"  value="{{bike_comp}}">
+                </div>
+                  <div class="frm-group">
+                  <input type="text" name="bike_model"  value="{{bike_model}}">
+                </div>
+                  <div class="frm-group">
+                  <input type="text" name="bike_price"  value="{{bike_price}}">
+                </div>
+                  <div class="frm-group">
+                  <input type="text" name="fuel_type"  value="{{fuel_type}}">
+                </div>
+                  <div class="frm-group">
+                  <input type="text" name="trans_type"  value="{{trans_type}}">
+                </div>
+                <div class="frm-group">
+                  <input type="text" name="speedometer"  value="{{speed}}">
+                </div>
+                <div class="frm-group">
+                  <input type="text" name="brakes"  value="{{bs}}">
+                </div>
+                <div class="frm-group">
+                  <input type="text" name="bluetooth"  value="{{bluetooth}}">
+                </div>
+                <div class="frm-group">
+                  <input type="text" name="usb_charge"  value="{{ports}}">
+                </div>
+                <div class="frm-group">
+                  <input type="text" name="gps"  value="{{gps}}">
+                </div>
+
+                      <div class="frm-group">
+                  <input type="text" name="cc"  value="{{cc}}">
+                </div>
+                      <div class="frm-group">
+                  <input type="text" name="milg"  value="{{milg}}">
+                </div>
+
+
+                </div>
+                <div class="frm-group">
+                  <input type="submit" value="Update">
+                </div>
+              </form>
+              <!-- <p><a href="#0">Haven't your any account in here?</a></p> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% include "footer.html" %}
